@@ -7,4 +7,6 @@ int main(){
     Vector temp(3);
     temp.inputTerminal();
     temp.printTerminal();
+
+    return 0;
 }

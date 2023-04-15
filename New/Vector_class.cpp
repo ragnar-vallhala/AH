@@ -1,8 +1,10 @@
 #include "Vector_class.h"
+#include <iostream>
+#include <math.h>
 
 Vector::Vector(int dimension)
 {
-    dim=dimension;
+    this->dim=dimension;
     this->vec = new double[dimension];
 }
 
@@ -39,7 +41,7 @@ double Vector::norm()
 
 Vector Vector::operator+(Vector vector)
 {   
-    if(this->dim!=vector.dim) return Vector();
+    if(this->dim!=vector.dim){Vector ref; return ref;}
     Vector newVector(this->dim);
     for(int i{};i<this->dim;i++){
         newVector.vec[i] = this->vec[i]+vector.vec[i];
@@ -49,7 +51,7 @@ Vector Vector::operator+(Vector vector)
 
 Vector Vector::operator-(Vector vector)
 {
-    if(this->dim!=vector.dim) return Vector();
+    if(this->dim!=vector.dim){Vector ref; return ref;}
     Vector newVector(this->dim);
     for(int i{};i<this->dim;i++){
         newVector.vec[i] = this->vec[i]-vector.vec[i];

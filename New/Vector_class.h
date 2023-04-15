@@ -1,7 +1,7 @@
 #pragma once
 #ifndef Vector_class
 #define Vector_class
-#include <iostream>
+
 
 class Vector{
 private:
